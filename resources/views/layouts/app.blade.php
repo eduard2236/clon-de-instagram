@@ -58,7 +58,7 @@
                             <a class="nav-link" href="{{ route('home')}}">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Subir Foto</a>
+                            <a class="nav-link" href="{{route('image.create')}}">Subir Foto</a>
                         </li>
                         <li>
                             @include('includes.avatar')
