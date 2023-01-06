@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Support\Facades\File;
+
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Response;
 
@@ -23,7 +26,7 @@ class UserController extends Controller
 
     public function update(Request $request){
         /* conseguir los datos del usuario */
-        $user = \Auth::user();
+        $user = Auth::user();
         $id = $user->id;
 
         /* validar los datos del usuario */

@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Http\Response;
+
 use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Support\Facades\File;
+
+use Illuminate\Support\Facades\Auth;
 
 use App\Image;
 
@@ -32,7 +36,7 @@ class ImageController extends Controller
 
         //asignar valores nuevo objeto
 
-        $user = \Auth::user();
+        $user = Auth::user();
 
         $image = new Image();
         $image->user_id = $user->id;
@@ -50,6 +54,16 @@ class ImageController extends Controller
         //redirecciona al home con un mensaje
         return redirect()->route('home')->with([
             'message' => 'la foto a sido subida correctamente !!'
+        ]);
+    }
+    public function getImage($filename){
+        $file = Storage::disk('images')->get($filename);
+        return new Response($file, 200);   
+    }
+    public function detail($id){
+        $image = Image::find($id);
+        return view('image.detail',[
+            'image' => $image
         ]);
     }
 }

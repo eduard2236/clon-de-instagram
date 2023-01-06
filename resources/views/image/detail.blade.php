@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             @include('includes.mensaje')
-            @foreach($images as $image)
+           
             <div class="card pub_image">
                 <div class="card-header">
                     @if($image->user->image)
@@ -44,10 +44,8 @@
                    
                 </div>
             </div>
-            @endforeach
             <!-- paginacion -->
             <div class="clearfix"></div>
-            {{$images->links()}}
 
         </div>
 
