@@ -63,6 +63,26 @@ form .avatar{
     margin: 0px 20px 20px 20px;
     
 }
+.image-detail{
+    max-height: 500px;
+}
 
+.pub_image_detail .comments{
+    padding: 20px;
+}
+/* grid basico*/
+.grid{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* boton de eliminar */
+
+.elimina{
+    display: inline-block;
+    
+    
+}
 
 
