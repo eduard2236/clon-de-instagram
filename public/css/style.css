@@ -50,9 +50,7 @@ form .avatar{
     cursor: pointer;
 
 }
-.likes img:hover{
-    background: url(../iconos/corazon-rojo.png);
-}
+
 
 .description{
     padding: 10px 10px;

@@ -35,7 +35,22 @@
                         <p>{{$image->description}}</p>
                     </div>
                     <div class="likes">
-                        <img src="{{asset('iconos/corazon-negro.png')}}" alt="">
+                       
+                        <!-- comprobar si el usuario es el mismo que le ha dado like a la publicacion -->
+                        <?php $user_like = false; ?>
+                        @foreach($image->likes as $like)
+                       
+                        
+                            @if($like->user->id == Auth::user()->id)
+                            <?php $user_like = true; ?>
+                            @endif
+                        @endforeach
+                        @if($user_like)
+                        <img src="{{asset('iconos/corazon-rojo.png')}}" alt="" data-id="{{$image->id}}" class="btn-dislike">
+                        @else
+                        <img src="{{asset('iconos/corazon-negro.png')}}" alt="" data-id="{{$image->id}}"  class="btn-like">
+                        @endif
+                        <span class="number_likes">{{count($image->likes)}}</span> 
                     </div>
                     <div class="clearfix"></div>
                     <div class="comments">
