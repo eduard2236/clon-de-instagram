@@ -9,6 +9,7 @@
            
             <div class="card pub_image pub_image_detail">
                 <div class="card-header">
+                <a href="{{route('perfil', ['id'=> $image->user->id])}}">
                     @if($image->user->image)
                     <div class="container-avatar">
                         <img src="{{ route('user.avatar',['filename'=>$image->user->image]) }}" alt="" class="avatar">
@@ -21,7 +22,7 @@
                             {{ ' | @'.$image->user->nick }}
                         </span>
                     </div>
-
+                </a>
                 </div>
 
                 <div class="card-body">
