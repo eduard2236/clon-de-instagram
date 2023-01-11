@@ -86,5 +86,32 @@ form .avatar{
     font-size: 0.9em;
     color: gray;
 }
+.profile-user{
+    height: 200px;
+    margin-bottom: 40px;
+}
+.profile-user .container-avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 900px;
+    overflow: hidden;
+    float: left;
+}
+.profile-user .container-avatar img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+.profile-user .user-info{
+    float: left;
+    padding-left:30px ;
+    padding-top: 30px;
+}
+.btn-info{
+    margin-left: 10px;
+}
 
+.image-edit{
+    width: 100%;
+}
 
