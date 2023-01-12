@@ -62,6 +62,9 @@
                             <a class="nav-link" href="{{route('likes')}}">Favoritas</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{route('user.index')}}">Personas</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{route('image.create')}}">Subir Foto</a>
                         </li>
                         <li>
