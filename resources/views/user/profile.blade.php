@@ -14,7 +14,7 @@
 
                 <div class="user-info">
                     <h1>{{'@'.$user->nick}}</h1>
-                    <h2>{{$user->name.' ',$user->surname}}</h2>
+                    <h2>{{$user->name.' '.$user->surname}}</h2>
                     <p>{{'Se unio: '.\FormatTime::LongTimeFilter($user->created_at) }}</p>
                 </div>
                 <div class="clearfix"></div>
